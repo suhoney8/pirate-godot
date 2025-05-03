@@ -1,0 +1,157 @@
+[gd_scene load_steps=37 format=3 uid="uid://omfagnb0a081"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/crabby.gd" id="1_0pefp"]
+[ext_resource type="Texture2D" uid="uid://bxpneaadsctfn" path="res://Pirate World/Enemies/Crabby/Hit/Hit 01.png" id="1_6dt4k"]
+[ext_resource type="Texture2D" uid="uid://dbkip8fu74u0" path="res://Pirate World/Enemies/Crabby/Idle/Idle 01.png" id="1_qvj6f"]
+[ext_resource type="Texture2D" uid="uid://b8xxj7uwcbw2r" path="res://Pirate World/Enemies/Crabby/Dead Ground/Dead Ground 04.png" id="1_xklw7"]
+[ext_resource type="Texture2D" uid="uid://dojf6brpvib7u" path="res://Pirate World/Enemies/Crabby/Idle/Idle 02.png" id="2_rgqok"]
+[ext_resource type="Texture2D" uid="uid://cgnovx3a3sqw7" path="res://Pirate World/Enemies/Crabby/Idle/Idle 03.png" id="3_b54j2"]
+[ext_resource type="Texture2D" uid="uid://d3222qgmp8bey" path="res://Pirate World/Enemies/Crabby/Idle/Idle 04.png" id="4_71ttj"]
+[ext_resource type="Texture2D" uid="uid://b83a8wklur76c" path="res://Pirate World/Enemies/Crabby/Idle/Idle 05.png" id="5_468lf"]
+[ext_resource type="Texture2D" uid="uid://cg0nfrnvos6cq" path="res://Pirate World/Enemies/Crabby/Idle/Idle 06.png" id="6_4y7we"]
+[ext_resource type="Texture2D" uid="uid://c1r0a85yy38sf" path="res://Pirate World/Enemies/Crabby/Idle/Idle 07.png" id="7_kejag"]
+[ext_resource type="Texture2D" uid="uid://cpl7qedrblp7m" path="res://Pirate World/Enemies/Crabby/Idle/Idle 08.png" id="8_vsmcg"]
+[ext_resource type="Texture2D" uid="uid://dkf7v7fjb5wr4" path="res://Pirate World/Enemies/Crabby/Idle/Idle 09.png" id="9_f5e3t"]
+[ext_resource type="Texture2D" uid="uid://bvpgkp6hvn8oe" path="res://Pirate World/Enemies/Crabby/Run/Run 01.png" id="10_qsdew"]
+[ext_resource type="Texture2D" uid="uid://tvjnjj858b3j" path="res://Pirate World/Enemies/Crabby/Run/Run 02.png" id="11_kjyqt"]
+[ext_resource type="Texture2D" uid="uid://bu4wtg14nyflk" path="res://Pirate World/Enemies/Crabby/Run/Run 03.png" id="12_0xfl3"]
+[ext_resource type="Texture2D" uid="uid://d0k7dmn11kw6i" path="res://Pirate World/Enemies/Crabby/Run/Run 04.png" id="13_em4x7"]
+[ext_resource type="Texture2D" uid="uid://bmfve7mb7eho4" path="res://Pirate World/Enemies/Crabby/Run/Run 05.png" id="14_t7rkq"]
+[ext_resource type="Texture2D" uid="uid://cv4d83gwlepbj" path="res://Pirate World/Enemies/Crabby/Run/Run 06.png" id="15_4rbwf"]
+[ext_resource type="Texture2D" uid="uid://ctq6txj4y5dxu" path="res://Pirate World/Enemies/Crabby/Hit/Hit 02.png" id="17_yjtpa"]
+[ext_resource type="Texture2D" uid="uid://dordlrowowdjc" path="res://Pirate World/Enemies/Crabby/Hit/Hit 03.png" id="18_0h72p"]
+[ext_resource type="Texture2D" uid="uid://d3p6101yu8vxb" path="res://Pirate World/Enemies/Crabby/Hit/Hit 04.png" id="19_uvcae"]
+[ext_resource type="Texture2D" uid="uid://cv5acirhqkc10" path="res://Pirate World/Enemies/Crabby/Dead Ground/Dead Ground 01.png" id="21_astul"]
+[ext_resource type="Texture2D" uid="uid://062ilvwmho1l" path="res://Pirate World/Enemies/Crabby/Dead Ground/Dead Ground 02.png" id="22_47fu0"]
+[ext_resource type="Texture2D" uid="uid://cgryb8r7cmyu6" path="res://Pirate World/Enemies/Crabby/Dead Ground/Dead Ground 03.png" id="23_5xwhw"]
+[ext_resource type="Texture2D" uid="uid://b1t23a1glg6il" path="res://Pirate World/Enemies/Crabby/Attack/Attack 01.png" id="24_1lin7"]
+[ext_resource type="Texture2D" uid="uid://c0yk4akwjbox3" path="res://Pirate World/Enemies/Crabby/Attack/Attack 02.png" id="25_a1ip5"]
+[ext_resource type="Texture2D" uid="uid://dww6ty1i4ch30" path="res://Pirate World/Enemies/Crabby/Attack/Attack 03.png" id="26_afsv7"]
+[ext_resource type="Texture2D" uid="uid://bbsu4falr64cj" path="res://Pirate World/Enemies/Crabby/Attack/Attack 04.png" id="27_l71se"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ovws"]
+size = Vector2(24, 19)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7xq54"]
+
+[sub_resource type="Animation" id="Animation_8qhea"]
+resource_name = "crabby_attack_damage"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("24_1lin7"), ExtResource("25_a1ip5"), ExtResource("26_afsv7"), ExtResource("27_l71se")]
+}
+
+[sub_resource type="Animation" id="Animation_vdiod"]
+resource_name = "crabby_death_ground"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("21_astul"), ExtResource("22_47fu0"), ExtResource("23_5xwhw"), ExtResource("1_xklw7")]
+}
+
+[sub_resource type="Animation" id="Animation_ytr5b"]
+resource_name = "crabby_hit_hurt"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_6dt4k"), ExtResource("17_yjtpa"), ExtResource("18_0h72p"), ExtResource("19_uvcae")]
+}
+
+[sub_resource type="Animation" id="Animation_g75ne"]
+resource_name = "crabby_idle"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_qvj6f"), ExtResource("2_rgqok"), ExtResource("3_b54j2"), ExtResource("4_71ttj"), ExtResource("5_468lf"), ExtResource("6_4y7we"), ExtResource("7_kejag"), ExtResource("8_vsmcg"), ExtResource("9_f5e3t")]
+}
+
+[sub_resource type="Animation" id="Animation_yubbp"]
+resource_name = "crabby_run"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("10_qsdew"), ExtResource("11_kjyqt"), ExtResource("12_0xfl3"), ExtResource("13_em4x7"), ExtResource("14_t7rkq"), ExtResource("15_4rbwf")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4wrcf"]
+_data = {
+"crabby_attack_damage": SubResource("Animation_8qhea"),
+"crabby_death_ground": SubResource("Animation_vdiod"),
+"crabby_hit_hurt": SubResource("Animation_ytr5b"),
+"crabby_idle": SubResource("Animation_g75ne"),
+"crabby_run": SubResource("Animation_yubbp")
+}
+
+[node name="crabby" type="CharacterBody2D"]
+script = ExtResource("1_0pefp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qvj6f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_6ovws")
+metadata/_edit_lock_ = true
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(-11, 0)
+target_position = Vector2(0, 13)
+metadata/_edit_lock_ = true
+
+[node name="DirectionTimer" type="Timer" parent="."]
+
+[node name="CrabbyHitBox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CrabbyHitBox"]
+shape = SubResource("CircleShape2D_7xq54")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4wrcf")
+}
+
+[connection signal="timeout" from="DirectionTimer" to="." method="_on_direction_timer_timeout"]

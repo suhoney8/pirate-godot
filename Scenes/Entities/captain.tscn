@@ -1,0 +1,467 @@
+[gd_scene load_steps=39 format=3 uid="uid://bpyow5fil2uxg"]
+
+[ext_resource type="Script" path="res://Scripts/Player/Captain.gd" id="1_gsgxm"]
+[ext_resource type="Texture2D" uid="uid://cmb6e2bwkw68u" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 1/01.png" id="2_bqxjk"]
+[ext_resource type="Texture2D" uid="uid://b521mrf0jlms8" path="res://Pirate World/Captain Clown Nose/Player with Sword/Run/06.png" id="2_g1gir"]
+[ext_resource type="Texture2D" uid="uid://csahyigo48g5n" path="res://Pirate World/Captain Clown Nose/Player with Sword/Idle/01.png" id="3_5kwhn"]
+[ext_resource type="Texture2D" uid="uid://cgirfp5n6fpet" path="res://Pirate World/Captain Clown Nose/Player with Sword/Idle/02.png" id="4_isecy"]
+[ext_resource type="Texture2D" uid="uid://bwu3elrlvcy6w" path="res://Pirate World/Captain Clown Nose/Player with Sword/Idle/03.png" id="5_mb55t"]
+[ext_resource type="Texture2D" uid="uid://dre47w80sc3mm" path="res://Pirate World/Captain Clown Nose/Player with Sword/Idle/04.png" id="6_q8ceb"]
+[ext_resource type="Texture2D" uid="uid://cgy52qiawt8nd" path="res://Pirate World/Captain Clown Nose/Player with Sword/Idle/05.png" id="7_rfbf2"]
+[ext_resource type="Texture2D" uid="uid://bn5x2kxjn18fg" path="res://Pirate World/Captain Clown Nose/Player with Sword/Run/01.png" id="8_vveoh"]
+[ext_resource type="Texture2D" uid="uid://b27k1kkiila3a" path="res://Pirate World/Captain Clown Nose/Player with Sword/Run/02.png" id="9_qwan8"]
+[ext_resource type="Texture2D" uid="uid://br1lp7ps3jxsw" path="res://Pirate World/Captain Clown Nose/Player with Sword/Run/03.png" id="10_lyjn5"]
+[ext_resource type="Texture2D" uid="uid://cldgb5awsgynm" path="res://Pirate World/Captain Clown Nose/Player with Sword/Run/04.png" id="11_ggn8h"]
+[ext_resource type="Texture2D" uid="uid://kwvxqeru6po5" path="res://Pirate World/Captain Clown Nose/Player with Sword/Run/05.png" id="12_axoqk"]
+[ext_resource type="Texture2D" uid="uid://cvivb6q3ihm7e" path="res://Pirate World/Captain Clown Nose/Player with Sword/Jump/01.png" id="13_6re1e"]
+[ext_resource type="Texture2D" uid="uid://1hobaos1c1qr" path="res://Pirate World/Captain Clown Nose/Player with Sword/Jump/02.png" id="14_lumr3"]
+[ext_resource type="Texture2D" uid="uid://6d7iicnm6igt" path="res://Pirate World/Captain Clown Nose/Player with Sword/Jump/03.png" id="15_kci7l"]
+[ext_resource type="Texture2D" uid="uid://b2riwbtuum8sm" path="res://Pirate World/Captain Clown Nose/Player with Sword/Fall/01.png" id="16_wkwxh"]
+[ext_resource type="Texture2D" uid="uid://cinqky0iln8ks" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 1/03.png" id="18_5jumi"]
+[ext_resource type="Texture2D" uid="uid://b0sbdl8csiqjy" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 2/01.png" id="19_1fnma"]
+[ext_resource type="Texture2D" uid="uid://d1ot1fkansji7" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 2/02.png" id="20_a3rb3"]
+[ext_resource type="Texture2D" uid="uid://0kmh02t4g3sq" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 2/03.png" id="21_5ywmp"]
+[ext_resource type="Texture2D" uid="uid://bmqjjsr0wbvh" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 3/01.png" id="22_mvwj6"]
+[ext_resource type="Texture2D" uid="uid://bcte2ugvmrk70" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 3/02.png" id="23_8a6r8"]
+[ext_resource type="Texture2D" uid="uid://bwfkbhakecy7m" path="res://Pirate World/Captain Clown Nose/Player with Sword/Attack 3/03.png" id="24_urf7y"]
+[ext_resource type="PackedScene" uid="uid://cfgiska8n7k6b" path="res://Scenes/health_bar.tscn" id="28_bqx8s"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xm83x"]
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qj360"]
+radius = 9.0
+height = 24.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dpxc"]
+size = Vector2(13.292, 5.46101)
+
+[sub_resource type="Animation" id="Animation_v1k58"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(19, 5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_8fok8"]
+resource_name = "attack_1"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_bqxjk"), ExtResource("18_5jumi"), ExtResource("16_wkwxh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(14, 5), Vector2(22.25, 3.25), Vector2(18.708, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackArea/CollisionShape2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_v8bqa"]
+resource_name = "attack_2"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("19_1fnma"), ExtResource("20_a3rb3"), ExtResource("21_5ywmp")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(10.5, -12.2915), Vector2(20.8782, 13.3782), Vector2(19.4087, 5.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.5708, 0.785398, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_hdjgf"]
+resource_name = "attack_3"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("22_mvwj6"), ExtResource("23_8a6r8"), ExtResource("24_urf7y")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-8, 4), Vector2(21, -14), Vector2(20, -2)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackArea/CollisionShape2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.785398, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_w7x0v"]
+resource_name = "fall_sword"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("16_wkwxh")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(18.3281, 0.5)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_be6ro"]
+resource_name = "idle_sword"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_5kwhn"), ExtResource("4_isecy"), ExtResource("5_mb55t"), ExtResource("6_q8ceb"), ExtResource("7_rfbf2")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(19, 4), Vector2(19, 4.5), Vector2(19, 5), Vector2(19, 6), Vector2(19, 5)]
+}
+
+[sub_resource type="Animation" id="Animation_ni2do"]
+resource_name = "jump_sword"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("13_6re1e"), ExtResource("14_lumr3"), ExtResource("15_kci7l")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(11.3125, -9), Vector2(9.25, -13), Vector2(10.375, -12)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackArea/CollisionShape2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-1.5708, -1.5708]
+}
+
+[sub_resource type="Animation" id="Animation_0te35"]
+resource_name = "run_sword"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("8_vveoh"), ExtResource("9_qwan8"), ExtResource("10_lyjn5"), ExtResource("11_ggn8h"), ExtResource("12_axoqk"), ExtResource("2_g1gir")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AttackArea/CollisionShape2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(17, 1.32813), Vector2(17, 3.375), Vector2(18.625, 5), Vector2(20, -0.6875), Vector2(19.3125, 1), Vector2(18.6563, 4.34375)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AttackArea/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AttackArea/CollisionShape2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_go56l"]
+_data = {
+"RESET": SubResource("Animation_v1k58"),
+"attack_1": SubResource("Animation_8fok8"),
+"attack_2": SubResource("Animation_v8bqa"),
+"attack_3": SubResource("Animation_hdjgf"),
+"fall_sword": SubResource("Animation_w7x0v"),
+"idle_sword": SubResource("Animation_be6ro"),
+"jump_sword": SubResource("Animation_ni2do"),
+"run_sword": SubResource("Animation_0te35")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ikubl"]
+height = 22.0
+
+[node name="Captain" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_gsgxm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+visible = false
+zoom = Vector2(5, 5)
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+shape = SubResource("CapsuleShape2D_xm83x")
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -1)
+texture = ExtResource("24_urf7y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CapsuleShape2D_qj360")
+metadata/_edit_lock_ = true
+
+[node name="AttackArea" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(19, 5)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_5dpxc")
+disabled = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_go56l")
+}
+
+[node name="HealthBar" parent="." instance=ExtResource("28_bqx8s")]
+visible = false
+offset_left = -12.0
+offset_top = -24.0
+offset_right = 12.0
+offset_bottom = -20.0
+
+[node name="Hurtbox" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CapsuleShape2D_ikubl")
+debug_color = Color(0.819618, 0.370068, 0.431088, 0.42)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
